@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'posts',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = 'build_sns.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'build_sns_db',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
